@@ -1,7 +1,8 @@
-/**
- * Implement Gatsby's SSR (Server Side Rendering) APIs in this file.
- *
- * See: https://www.gatsbyjs.com/docs/ssr-apis/
- */
+import React from "react"
 
-// You can delete this file if you're not using it
+const HeadComponents = [<script src="https://chat-assets.frontapp.com/v1/chat.bundle.js"/>]
+
+const onRenderBody = ({setPostBodyComponents}) => {
+    setPostBodyComponents(HeadComponents)
+}
+export { onRenderBody }
